@@ -1,14 +1,23 @@
 @font-face {
-    font-family: 'cursiv';
-    src:  url('../fonts/9151.ttf');
+    font-family: 'lato-bold';
+    src:  url('../fonts/Lato-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'dobro-reg';
+    src:  url('../fonts/Dobrozrachniy-Regular.ttf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 body {
+    font-family: 'lato-bold';
     color: #000000;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.2;
 }
 
@@ -34,45 +43,94 @@ h5, .h5 {
     font-family: 'font-black'
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+.color-braun {
+    color: #e3b566;
+}
+
 .btn-primary {
-    background: rgb(255,221,77);
-    background: linear-gradient(45deg, rgba(255,221,77,1) 0%, rgba(254,205,0,1) 50%);
-    border: 1px solid rgba(254,205,0,1);
-    color: #000000;
+    padding: 0 25px;
+    font-family: 'dobro-reg';
     text-transform: uppercase;
-    font-size: 18px;
-    padding: 10px 30px;
-    border-radius: 50px;
-    height: 50px;
-    line-height: 31px;
-    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.15);
+    font-size: 36px;
+    border-radius: 55px;
+    border-bottom-right-radius: 0px;
+    height: 55px;
+    line-height: 44px;
 }
 
 .btn-primary:hover {
-    background: rgb(254,205,0);
-    background: linear-gradient(45deg, rgba(254,205,0,1) 0%, rgba(255,221,77,1) 50%);
-    border: 1px solid rgba(254,205,0,1);
+
+}
+
+.btn-border {
+    z-index: 0;
+    overflow: hidden;
+    letter-spacing: 1px;
+    position: relative;
+    background: transparent;
+    border: 3px solid #e3b566;
+}
+
+.btn-border:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 0px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e3b566;
+    transition: all 600ms;
+  }
+
+.btn-border:hover {
+    background: transparent;
+    border: 3px solid #e3b566;
     color: #000000;
-    box-shadow: none;
+    transition: all 600ms;
 }
 
-.btn-primaty-green {
-    background: rgb(96,167,28);
-    background: linear-gradient(180deg, rgba(96,167,28,1) 0%, rgba(73,125,23,1) 48%);
-    border: 1px solid rgba(73,125,23,1);
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 18px;
-    padding: 10px 30px;
-    border-radius: 50px;
-    height: 50px;
-    line-height: 31px;
-    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.15);
+.btn-border:hover:after {
+    width: 400px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+  }
+
+header{
+    background: #020202;
+    padding: 25px 0;
 }
 
-.btn-primaty-green:hover {
-    background: rgb(73,125,23);
-    background: linear-gradient(180deg, rgba(73,125,23,1) 0%, rgba(96,167,28,1) 48%);
-    border: 1px solid rgba(73,125,23,1);
+header .logo img {
+    width: auto;
+}
+
+.header-phone a {
+    font-size: 36px;
+    margin: 30px 0;
     color: #ffffff;
+    text-decoration: none;
+}
+
+.header-phone a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-phone a span {
+    font-size: 30px;
+}
+
+.header-phone .btn-border {
+    padding: 0 41px;
 }
