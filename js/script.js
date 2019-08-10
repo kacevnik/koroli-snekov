@@ -16,18 +16,9 @@ jQuery(document).ready(function ($) {
         loop:true,
         margin:10,
         nav:true,
-        navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
+        dots:true,
+        navText: ['<img src="img/arrow_left.png">','<img src="img/arrow_right.png">'],
+        items: 1
     });
 
     ymaps.ready(init);

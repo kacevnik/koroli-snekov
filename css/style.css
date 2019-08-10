@@ -352,6 +352,69 @@ header .text {
     border-top-left-radius: 0px;
 }
 
+/*************** Reviews Block **************/
+
+#reviews {
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+.carusel {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#reviews .proff {
+    font-size: 22px;
+}
+
+.owl-dots {
+    text-align: center;
+    padding: 20px 0 0 0;
+    display: none;
+}
+
+.owl-nav {
+    display: block;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 27%;
+    left: -135px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 27%;
+    right: -135px;
+}
+
+.owl-carousel button.owl-dot {
+    height: 25px;
+    width: 25px;
+    border: 3px solid #dcac56;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.owl-carousel button.owl-dot:last-child {
+    margin-right: 0px;
+}
+
+.owl-carousel button.owl-dot.active {
+    background: #dcac56;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
+    opacity: 0.7;
+}
+
+.owl-carousel .item iframe {
+    width: 100%;
+    height: 517px;
+}
+
 @media (max-width: 991px){
     #plus .img {
         height: 100px;
@@ -400,6 +463,18 @@ header .text {
     #plus .img.bottom-right, #plus .img.bottom-left, #plus .img.top-right, #plus .img.top-left {
         border-radius: 20px;
         border-bottom-right-radius: 0px;
+    }
+
+    .owl-dots {
+        display: block;
+    }
+
+    .owl-nav {
+        display: none;
+    }
+
+    .owl-carousel .item iframe {
+        height: 195px;
     }
 
 }
