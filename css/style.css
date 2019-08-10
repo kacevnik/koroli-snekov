@@ -60,9 +60,8 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    font-size: 32px;
-    font-weight: bold;
-    font-family: 'font-black'
+    font-size: 36px;
+    font-family: 'dobro-reg'
 }
 
 h5, .h5 {
@@ -81,6 +80,10 @@ h5, .h5 {
 
 .color-braun {
     color: #e3b566;
+}
+
+.color-red {
+    color: #a1293c;
 }
 
 .color-braun-black {
@@ -303,6 +306,60 @@ header .text {
     margin-left: -40%;
 }
 
+/*************** Plus Block **************/
+
+#plus {
+    background: url('../img/plus_bg.png') top center repeat-x;
+    padding: 60px 0 105px;
+    position: relative;
+}
+
+#plus::after{
+    content: '';
+    position: absolute;
+    height: 93px;
+    width: 100%;
+    background: url('../img/plus_bottom_bg.png') bottom center repeat-x;
+    bottom: -5px;
+}
+
+#plus h2 {
+    margin: 0 0 60px 0;
+}
+
+#plus .img {
+    background: #dcac56;
+    padding: 20px;
+    border-radius: 20px;
+    height: 160px;
+    width: 160px;
+    line-height: 100px;
+}
+
+#plus .img.bottom-right {
+    border-bottom-right-radius: 0px;
+}
+
+#plus .img.bottom-left {
+    border-bottom-left-radius: 0px;
+}
+
+#plus .img.top-right {
+    border-top-right-radius: 0px;
+}
+
+#plus .img.top-left {
+    border-top-left-radius: 0px;
+}
+
+@media (max-width: 991px){
+    #plus .img {
+        height: 100px;
+        width: 100px;
+        line-height: 60px;
+    }
+}
+
 @media (max-width: 767px){
 
     header {
@@ -327,6 +384,22 @@ header .text {
 
     #products .col-md-4:last-child .product_item {
         margin-bottom: 0;
+    }
+
+    #plus {
+        background-size: cover;
+    }
+
+    #plus .img {
+        height: 130px;
+        width: 130px;
+        line-height: 60px;
+        margin: 0 auto 20px;
+    }
+
+    #plus .img.bottom-right, #plus .img.bottom-left, #plus .img.top-right, #plus .img.top-left {
+        border-radius: 20px;
+        border-bottom-right-radius: 0px;
     }
 
 }
