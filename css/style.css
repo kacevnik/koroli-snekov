@@ -47,6 +47,11 @@ h2, .h2 {
     font-family: 'font-black'
 }
 
+h3, .h3 {
+    font-size: 46px;
+    font-family: 'dobro-reg';
+}
+
 h4, .h4 {
     font-size: 32px;
     font-weight: bold;
@@ -69,6 +74,10 @@ h5, .h5 {
 
 .color-braun {
     color: #e3b566;
+}
+
+.color-braun-black {
+    color: #491308;
 }
 
 .btn-primary {
@@ -138,6 +147,16 @@ header{
     background: #000000 url('../img/header_bg.png') bottom center no-repeat;
     padding: 25px 0 395px;
     background-size: contain;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    background: url(../img/main_top_bg.png) bottom center repeat-x;
+    width: 100%;
+    height: 128px;
+    bottom: 0;
 }
 
 header .logo img {
@@ -195,6 +214,21 @@ header .text {
     margin-top: 20px;
 }
 
+#person {
+    background: #dcac56;
+    padding: 60px 0;
+}
+
+#person p {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+}
+
+#person span {
+    font-family: inherit;
+    font-size: 20px;
+}
+
 @media (max-width: 400px){
 
     header {
@@ -203,6 +237,10 @@ header .text {
 
     header h1 .title {
         padding: 40px 0;
+    }
+
+    header::after {
+        bottom: -58px;
     }
 
 }
