@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'lato-black';
+    src:  url('../fonts/lato-black.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'lato-bold';
     src:  url('../fonts/Lato-Bold.ttf');
     font-weight: normal;
@@ -34,7 +42,7 @@ body {
     font-family: 'lato-bold';
     color: #000000;
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 img {
@@ -42,9 +50,8 @@ img {
 }
 
 h2, .h2 {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: 'font-black'
+    font-size: 70px;
+    font-family: 'dobro-reg';
 }
 
 h3, .h3 {
@@ -81,6 +88,10 @@ h5, .h5 {
 }
 
 .btn-primary {
+    border: 1px solid rgb(212,161,72);
+    color: #000000;
+    background: rgb(239,195,117);
+    background: linear-gradient(180deg, rgba(239,195,117,1) 0%, rgba(212,161,72,1) 50%);
     padding: 0 25px;
     font-family: 'dobro-reg';
     text-transform: uppercase;
@@ -89,13 +100,17 @@ h5, .h5 {
     border-bottom-right-radius: 0px;
     height: 55px;
     line-height: 44px;
+    transition: all 0ms;
 }
 
 .btn-primary:hover {
-
+    border: 1px solid rgb(212,161,72);
+    background: rgb(212,161,72);
+    background: linear-gradient(180deg, rgba(212,161,72,1,1) 0%, rgba(239,195,117,1) 50%);
 }
 
 .btn-border {
+    color: #ffffff;
     z-index: 0;
     overflow: hidden;
     letter-spacing: 1px;
@@ -143,6 +158,8 @@ h5, .h5 {
     background: transparent;
 }
 
+/*************** Header Block **************/
+
 header{
     background: #000000 url('../img/header_bg.png') bottom center no-repeat;
     padding: 25px 0 395px;
@@ -156,7 +173,7 @@ header::after {
     background: url(../img/main_top_bg.png) bottom center repeat-x;
     width: 100%;
     height: 128px;
-    bottom: 0;
+    bottom: -5px;
 }
 
 header .logo img {
@@ -214,6 +231,8 @@ header .text {
     margin-top: 20px;
 }
 
+/*************** Person Block **************/
+
 #person {
     background: #dcac56;
     padding: 60px 0;
@@ -229,7 +248,62 @@ header .text {
     font-size: 16px;
 }
 
-@media (max-width: 400px){
+.person_bg {
+    top: 0;
+    left: -230px;
+}
+
+.person_bg img {
+    width: 70%;
+}
+
+/*************** Products Block **************/
+
+#products {
+    background: #dcac56 url('../img/products_bg.png') bottom center repeat-x;
+    padding: 60px 0;
+}
+
+#products h2 {
+    margin-bottom: 100px;
+}
+
+#products::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    height: 61px;
+    background: url('../img/products_top_bg.png') top center repeat-x;
+}
+
+.product_item {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    border-bottom-right-radius: 0px;
+    padding: 75px 20px 20px 20px;
+    box-shadow: 0px 4px 10px 6px rgba(0, 0, 0, 0.19);
+}
+
+.product_item img {
+    width: 80%;
+}
+
+.product_item .text {
+    border-top: 1px solid #e3b566;
+    padding: 10px 0 0 0;
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: 'lato-black';
+}
+
+.product_item .title {
+    top: -60px;
+    left: 50%;
+    margin-left: -40%;
+}
+
+@media (max-width: 767px){
 
     header {
         padding: 25px 0 185px;
@@ -241,6 +315,18 @@ header .text {
 
     header::after {
         bottom: -58px;
+    }
+
+    #products {
+        background-size: cover;
+    }
+
+    .product_item {
+        margin-bottom: 40px;
+    }
+
+    #products .col-md-4:last-child .product_item {
+        margin-bottom: 0;
     }
 
 }
