@@ -357,6 +357,7 @@ header .text {
 #reviews {
     background: #ffffff;
     padding: 60px 0;
+    overflow: hidden;
 }
 
 .carusel {
@@ -414,6 +415,95 @@ header .text {
     width: 100%;
     height: 517px;
 }
+
+.carusel::after {
+    content: '';
+    height: 100%;
+    background: url('../img/review_left.png') bottom right no-repeat;
+    width: 100%;
+    bottom: -5px;
+    right: 100%;
+    position: absolute;
+}
+
+.carusel::before {
+    content: '';
+    height: 100%;
+    background: url('../img/review_right.png') bottom left no-repeat;
+    width: 100%;
+    bottom: -5px;
+    left: 100%;
+    position: absolute;
+}
+
+/*************** Footer **************/
+
+footer {
+    padding: 40px 0;
+    background: url('../img/footer_bg.png')top center repeat-x;
+    background-size: cover;
+}
+
+footer form i {
+    margin-right: 10px;
+}
+
+footer form .input_wrap {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+footer form input {
+    border: none;
+    color: #ffffff;
+    outline: none;
+    background: transparent;    
+}
+
+footer .btn {
+    padding: 0 40px;
+}
+
+.footer_info ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer_info ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer_info ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer_info a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer_info a:hover {
+    text-decoration: none;
+}
+
+#map {
+    width: 50%;
+    height: 620px;
+    margin: -40px 0;
+}
+
+.footer_input::-webkit-input-placeholder {color:#ffffff}/* webkit */
+.footer_input::-moz-placeholder          {color:#ffffff}/* Firefox 19+ */
+.footer_input:-moz-placeholder           {color:#ffffff}/* Firefox 18- */
+.footer_input:-ms-input-placeholder      {color:#ffffff}/* IE */
+
+:focus::-webkit-input-placeholder {opacity:0;}/* webkit */
+:focus::-moz-placeholder          {opacity:0;}/* Firefox 19+ */
+:focus:-moz-placeholder           {opacity:0;}/* Firefox 18- */
+:focus:-ms-input-placeholder      {opacity:0;}/* IE */
 
 @media (max-width: 991px){
     #plus .img {
@@ -475,6 +565,20 @@ header .text {
 
     .owl-carousel .item iframe {
         height: 195px;
+    }
+
+    .carusel::before, .carusel::after {
+       content: none;
+    }
+
+    footer form .input_wrap {
+        margin-bottom: 10px;
+    }
+
+    #map {
+        width: 100%;
+        height: 600px;
+        margin: 0 0 30px 0;
     }
 
 }

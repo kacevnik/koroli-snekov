@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
     function init () {
         var myMap = new ymaps.Map("map", {
             // Центр карты, указываем коордианты
-            center:[54.973762, 83.092797],
+            center:[55.086652, 82.979307],
             // Масштаб, тут все просто
             zoom: 16,
         }); 
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
         var myGeoObjects = [];
          
         // Наша метка, указываем коордианты
-        myGeoObjects = new ymaps.Placemark([54.973529, 83.098628],{
+        myGeoObjects = new ymaps.Placemark([55.086652, 82.979307],{
                         balloonContentBody: 'Текст в балуне',
                         },{
                         iconLayout: 'default#image',
