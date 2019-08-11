@@ -2,6 +2,8 @@ jQuery(document).ready(function ($) {
 
     new WOW().init();
 
+    $('[data-fancybox]').fancybox();
+
     //Маска под телефонный номер для поля Input
     $('input[name="phone"]').mask("+7 (999) 999-99-99");
 
