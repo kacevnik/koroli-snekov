@@ -527,7 +527,7 @@ footer .btn {
 
 .modal-dialog {
     width: 280px;
-    margin-top: 65px;
+    margin: 65px auto;
 }
 
 .modal-dialog .close {
@@ -539,7 +539,7 @@ footer .btn {
 
 .modal-content {
     width: 280px;
-    padding: 30px 10px 20px;
+    padding: 30px 0 20px;
     text-align: center;
     border-radius: 15px;
 }
